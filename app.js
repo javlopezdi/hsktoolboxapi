@@ -7,7 +7,6 @@ const app = express();
 const mongoose = require("mongoose");
 const ExpressError = require("./utils/ExpressError");
 const cors = require("cors");
-const Hsk1Word = require("./models/hsk1Word");
 const User = require("./models/user");
 const passport = require("passport");
 const passportJWT = require("passport-jwt");

@@ -82,12 +82,12 @@ module.exports = [
     hanzi: "大",
     pinyin: "dà",
     translations: ["big", "oldest"],
-    category: "adjective",
+    category: "adjectives",
   },
   {
     hanzi: "的",
     pinyin: "de",
-    translations: ["of", "(possessive particle)", "(used after an attribute)"],
+    translations: ["of", "(possessive particle)"],
     category: "others",
   },
   {
@@ -165,13 +165,13 @@ module.exports = [
   {
     hanzi: "饭馆",
     pinyin: "fàn guǎn",
-    translations: ["restaurant", "CL:家[jiā]"],
+    translations: ["restaurant"],
     category: "nouns",
   },
   {
     hanzi: "飞机",
     pinyin: "fēi jī",
-    translations: ["airplane", "CL:架[jià]"],
+    translations: ["airplane"],
     category: "nouns",
   },
   {

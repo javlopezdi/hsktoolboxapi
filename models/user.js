@@ -6,12 +6,13 @@ const UserSchema = new Schema({
   firstName: {
     type: String,
     required: true,
-    unique: true,
   },
   lastName: {
     type: String,
     required: true,
-    unique: true,
+  },
+  selectedHsk: {
+    type: Number,
   },
   learnedHsk1Words: [
     {

@@ -20,7 +20,7 @@ const seedDB = async () => {
     const hsk1Word = new Hsk1Word({
       hanzi: vocabulary[i].hanzi,
       pinyin: vocabulary[i].pinyin,
-      translations: vocabulary[i].pinyin,
+      translations: vocabulary[i].translations,
       category: vocabulary[i].category,
     });
     await hsk1Word.save();

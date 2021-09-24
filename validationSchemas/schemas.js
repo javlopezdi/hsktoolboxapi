@@ -35,3 +35,7 @@ module.exports.userSchema = Joi.object({
   email: Joi.string().email().required().escapeHtml(),
   password: Joi.string().escapeHtml().required(),
 });
+
+module.exports.selectedHskSchema = Joi.object({
+  selectedHsk: Joi.number().integer().min(1).max(6).required(),
+});

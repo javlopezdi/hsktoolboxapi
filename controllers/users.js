@@ -8,35 +8,40 @@ module.exports.signup = async (req, res) => {
   await user.save();
   req.login(user, (err) => {
     if (err) return next(err);
-    const body = { _id: user._id, firstName: user.firstName };
+    const body = { _id: user._id };
     const token = jwt.sign({ user: body }, "secret");
     return res.json({ token, userId: user._id, firstName: user.firstName });
   });
 };
 
 module.exports.signin = (req, res) => {
-  const body = { _id: req.user._id, firstName: req.user.firstName };
+  const body = { _id: req.user._id };
   const token = jwt.sign({ user: body }, "secret");
   return res.json({
     token,
     userId: req.user._id,
     firstName: req.user.firstName,
+    selectedHsk: req.user.selectedHsk,
+  });
+};
+
+module.exports.signInWithToken = (req, res) => {
+  const body = { _id: req.user._id };
+  const token = jwt.sign({ user: body }, "secret");
+  return res.json({
+    token,
+    userId: req.user._id,
+    firstName: req.user.firstName,
+    selectedHsk: req.user.selectedHsk,
   });
 };
 
 module.exports.fetchLearnedWords = async (req, res) => {
-  if (!req.user) {
-    res.status(401).json({ message: "incorrect token" });
-  }
-  res.json(req.user);
+  res.send(req.user.learnedHsk1Words);
 };
 
 module.exports.addLearnedWords = async (req, res) => {
-  if (!req.user) {
-    req.status(401).json({ message: "incorrect token" });
-  }
   const user = await User.findById(req.user._id);
-  console.log(user);
   req.body.learnedWords.forEach((learnedWord) => {
     if (!user.learnedHsk1Words.includes(learnedWord)) {
       user.learnedHsk1Words.push(learnedWord);
@@ -44,7 +49,17 @@ module.exports.addLearnedWords = async (req, res) => {
   });
   await user.save();
   res.json({
-    message: "Learned Words, saved",
-    learnedWords = user.learnedHsk1Words,
+    learnedWords: user.learnedHsk1Words,
   });
+};
+
+module.exports.setSelectedHsk = async (req, res) => {
+  const user = await User.findById(req.user._id);
+  user.selectedHsk = req.body.selectedHsk;
+  await user.save();
+  res.json({ selectedHsk: user.selectedHsk });
+};
+
+module.exports.fetchSelectedHsk = async (req, res) => {
+  res.json({ selectedHsk: req.user.selectedHsk });
 };
