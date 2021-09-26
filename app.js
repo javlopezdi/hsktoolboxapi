@@ -5,7 +5,7 @@ if (process.env.NODE_ENV !== "production") {
 const express = require("express");
 const app = express();
 const mongoose = require("mongoose");
-const ExpressError = require("./utils/ExpressError");
+const path = require("path");
 const cors = require("cors");
 const User = require("./models/user");
 const passport = require("passport");
@@ -70,9 +70,12 @@ db.once("open", function () {
 app.use("/api/hskwords", hskWordRoutes);
 app.use("/api", userRoutes);
 
-// Error handlers
-app.all("*", (req, res, next) => {
-  next(new ExpressError("Not Found", 404));
+// Front end config
+
+app.use(express.static(path.join(__dirname, "client/build")));
+
+app.get("*", (req, res) => {
+  return res.sendFile(path.join(__dirname, "/client/build/index.html"));
 });
 
 app.use((err, req, res, next) => {
