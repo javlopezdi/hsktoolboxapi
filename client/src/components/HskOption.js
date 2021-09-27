@@ -28,9 +28,11 @@ const HskOption = ({
         <h3 className="text-center text-lg font-semibold pb-2">{title}</h3>
         <p className="text-justify">{content}</p>
       </div>
-      <div
-        className={`bg-${pandaImage} h-48 w-full md:w-72 bg-cover flex-shrink-0 rounded-b-xl`}
-      ></div>
+      <img
+        alt="A panda"
+        className="h-48 w-full md:w-72 rounded-b md:rounded-r"
+        src={pandaImage}
+      />
     </button>
   );
 };

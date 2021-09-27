@@ -10,6 +10,19 @@ const UserSettings = ({ setSelectedHsk }) => {
     setSelectedHsk(value);
   };
 
+  const firstPanda =
+    "https://images.unsplash.com/photo-1593526492327-b071f3d5333e?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80";
+  const secondPanda =
+    "https://images.unsplash.com/photo-1518247268172-e153ae1a7300?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80";
+  const thirdPanda =
+    "https://images.unsplash.com/photo-1608475125659-558cd2d12e83?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80";
+  const fourthPanda =
+    "https://images.unsplash.com/photo-1622892735236-a3c8f017d45e?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80";
+  const fifthPanda =
+    "https://images.unsplash.com/photo-1597953601374-1ff2d5640c85?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80";
+  const sixthPanda =
+    "https://images.unsplash.com/photo-1585355597830-654035143d75?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1092&q=80";
+
   return (
     <RegularContainer>
       {/* HSK Section */}
@@ -28,7 +41,7 @@ const UserSettings = ({ setSelectedHsk }) => {
                         chinese language for 1 semester, at least 2 or 3 hours
                         every week. To succeed students must master 150 commonly
                         used words and basic grammar patterns."
-            pandaImage="first-panda"
+            pandaImage={firstPanda}
             isOdd={true}
           />
           <HskOption
@@ -39,7 +52,7 @@ const UserSettings = ({ setSelectedHsk }) => {
                         chinese language for 2 semesters, at least 2 or 3 hours
                         every week. To succeed students must master 300 commonly
                         used words and basic grammar patterns."
-            pandaImage="second-panda"
+            pandaImage={secondPanda}
             isOdd={false}
           />
           <HskOption
@@ -50,7 +63,7 @@ const UserSettings = ({ setSelectedHsk }) => {
                         chinese language for 3 semesters, at least 2 or 3 hours
                         every week. To succeed students must master 600 commonly
                         used words and related grammar patterns."
-            pandaImage="third-panda"
+            pandaImage={thirdPanda}
             isOdd={true}
           />
           <HskOption
@@ -61,7 +74,7 @@ const UserSettings = ({ setSelectedHsk }) => {
                         chinese language for 4 semesters, at least 2 or 3 hours
                         every week. To succeed students must master 1200
                         commonly used words and related grammar patterns."
-            pandaImage="fourth-panda"
+            pandaImage={fourthPanda}
             isOdd={false}
           />
           <HskOption
@@ -72,7 +85,7 @@ const UserSettings = ({ setSelectedHsk }) => {
                         chinese language for more than 2 years, at least 2 or 3
                         hours every week. To succeed students must master 2500
                         commonly used words and related grammar patterns."
-            pandaImage="fifth-panda"
+            pandaImage={fifthPanda}
             isOdd={true}
           />
           <HskOption
@@ -83,7 +96,7 @@ const UserSettings = ({ setSelectedHsk }) => {
                         chinese language for more than 3 years, at least 2 or 3
                         hours every week. To succeed students must master 5000
                         commonly used words and related grammar patterns."
-            pandaImage="sixth-panda"
+            pandaImage={sixthPanda}
             isOdd={false}
           />
         </div>

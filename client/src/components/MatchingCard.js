@@ -23,7 +23,7 @@ const MatchingCard = ({
     <div
       onClick={handleClick}
       onTransitionEnd={() => handleTransitionEnd(index)}
-      className="flip-card md:h-64 lg:h-96 w-full my-8"
+      className="flip-card h-56 md:h-64 lg:h-96 w-full my-2 md:my-8"
     >
       <div
         className={`${
