@@ -8,9 +8,9 @@
 
 HSK Toolbox is a Full Stack Web Application that allows you to practice your HSK vocabulary with different games and keeps track of the progress you make.
 
-You can follow the setup instructions below to run this project in your own machine or you can see the live site in this [link.](https://hsktoolboxdemo.herokuapp.com/)
+You can see the live site in this [link.](https://hsktoolboxdemo.herokuapp.com/)
 
-## Main Technologies
+## Technologies
 
 - **React.js**
 - **Redux**
@@ -34,30 +34,42 @@ The Home page welcomes you to the website, it has a button and navigation bar to
   <img width="80%" src="./signuphsktoolbox.png" />
 </p>
 
+This form was created with the library **redux-form**. After validating the data in the frontend and in the backend, it is stored in a **MongoDB** Database
+
 ### Sign In
 <p align="left">
   <img width="80%" src="./signinhsktoolbox.png" />
 </p>
+
+The modal was created using the Dialog from **headless.ui** and the form with the library **redux-form**. After signing in, you are issued a **JSON Web Token** to validate your identity.
 
 ### Progress
 <p align="left">
   <img width="80%" src="./progresshsktoolbox.png" />
 </p>
 
+Here you can track all the vocabulary you have practiced in the games, if you got them correct, they are marked as *learned*. You can expand each category to see the word list.
+
 ### Practice
 <p align="left">
   <img width="80%" src="./practicehsktoolbox.png" />
 </p>
+
+Here you can choose the game you want to play in order to practice the HSK vocabulary.
 
 ### Matching Game
 <p align="left">
   <img width="80%" src="./matchinggamehsktoolbox.png" />
 </p>
 
+This is the classic matching game where you have to tap a pair of cards until you find the chinese character and its matching english meaning.
+
 ### Multiple Choice
 <p align="left">
   <img width="80%" src="./multiplechoicehsktoolbox.png" />
 </p>
+
+In this game you are given a chinese chracter and four possible answers, after answering all the questions and submitting, you can watch the results.
 
 ### Complete Sentence
 *Coming soon...*
@@ -66,43 +78,4 @@ The Home page welcomes you to the website, it has a button and navigation bar to
   <img width="80%" src="./settingshsktoolbox.png" />
 </p>
 
-
-<!-- <p align="left">
-  <img width="80%" src="./dogsMain.png" />
-</p>
-
-- **Pagination:** Pages are automatically created according to how many breeds are found and you can navigate through them with a click.
-
-- **Search by name:** Making use of a redux state and an unbounced local state, the dogs are filtered by breed name 200ms after a change in the search bar is made or when the search button is clicked.
-
-- **Filtering and sorting:** You can filter by temper or origin (whether they are from The Dogs API or created by users) and sort by name or weight. You can even use all the filters and sorters at the same time. -->
-## Setup
-
-<!-- 1. Clone the repository
-   ```
-   git clone https://github.com/javlopezdi/PI-Dogs-main.git
-   ```
-2. Set up a PostgreSQL Database
-   
-   For this you can download the software in the [PostgreSQL website](https://www.postgresql.org/download/) and follow the instructions there to set up a database
-3. Set up the environment variables
-   
-   Once you hace your database ready, you must create an `.env` file in your root folder and make sure you have these variables with your own information. In order to get the `DOG_API_KEY` you just have to register in [The Dog Api](https://www.thedogapi.com/)
-   ```
-   DB_USER=<your-postgres-user>
-   DB_PASSWORD=<your-postgres-password>
-   DB_HOST=localhost
-   DOG_API_KEY=<your-dog-api-key>
-   ```
-4. Install the dependencies
-   ```
-   npm install && cd client && npm install
-   ```
-5. Build the React app
-   ```
-   cd client && npm run build
-   ```
-6. Run the project!
-   ```
-   npm start
-   ``` -->
+Here you can choose the HSK level that you want to practice, it is necessary to choose one before start practicing.
